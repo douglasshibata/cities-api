@@ -1,6 +1,7 @@
 package com.github.douglasshibata.citiesapi.states.entities;
 
 import com.github.douglasshibata.citiesapi.countries.entities.Country;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -16,9 +17,9 @@ import org.hibernate.annotations.TypeDefs;
 
 @Entity(name = "State")
 @Table(name = "estado")
-//@TypeDefs({
-//    @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
-//})
+@TypeDefs({
+    @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
+})
 public class State {
 
 	@Id
